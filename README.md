@@ -7,7 +7,23 @@ This is a simple introduction to function chaining in Azure Functions using Azur
 
 Steps [Details to Follow]
 * Register 2 Apps in Azure AD to signify the API App and the Caller App
-* Create a Key Vault with values for the following
+* For  local development,  create a local.settings.json with the following
+```json
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "{}",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "TENANTID" : "{}",
+    "OAUTHCLIENTID" : "{}",
+    "OAUTHSECRET": "{}",
+    "SCOPE": "{api://clientid/.default"},
+    "JOBEXECUTOR2": "{http://xxxx/api/JobExecutor}",
+    "AUDIENCE2" : "api://clientid"
+  }
+}
+```
+* For execution in Azure, Create a Key Vault with secrets for the following and allow for Azure Functions Managed Identity to retrieve the secrets
     * "TENANTID" 
     * "OAUTHCLIENTID" 
     * "OAUTHSECRET"
