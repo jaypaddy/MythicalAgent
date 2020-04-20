@@ -2,7 +2,7 @@
 
 This is a simple introduction to function chaining in Azure Functions using Azure AD OAuth for API protection.
 
-![Image description](l./Func-Func-AzureAD-v1.png)
+![Image description](./Func-Func-AzureAD-v1.png)
 
 
 Steps [Details to Follow]
